@@ -1,33 +1,23 @@
+require('dotenv').config();
+
 module.exports = {
   siteMetadata: {
-    title: `Novela by Narative`,
-    name: `Narative`,
-    siteUrl: `https://novela.narative.co`,
+    title: `Addicts by Svirins`,
+    name: `Addicts`,
+    siteUrl: `https://addict.cf`,
     description: `This is my description that will be used in the meta tags and important for search results`,
     hero: {
-      heading: `Welcome to Novela, the simplest way to start publishing with Gatsby.`,
-      maxWidth: 652,
+      heading: `Addiction. Все об аддикции. Способы решения, рекомендации, советы`,
+      maxWidth: 1652,
     },
     social: [
       {
         name: `twitter`,
-        url: `https://twitter.com/narative`,
-      },
-      {
-        name: `github`,
-        url: `https://github.com/narative`,
+        url: `https://twitter.com/svirins`,
       },
       {
         name: `instagram`,
-        url: `https://instagram.com/narative.co`,
-      },
-      {
-        name: `linkedin`,
-        url: `https://www.linkedin.com/company/narative/`,
-      },
-      {
-        name: `dribbble`,
-        url: `https://dribbble.com/narativestudio`,
+        url: `https://instagram.com/`,
       },
     ],
   },
@@ -39,22 +29,36 @@ module.exports = {
         contentAuthors: "content/authors",
         basePath: "/",
         authorsPage: true,
+        mailchimp: true, // make sure this is true!
         sources: {
-          local: true,
-          // contentful: true,
+          local: false,
+          contentful: true,
         },
       },
     },
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-source-contentful',
       options: {
-        name: `Novela by Narative`,
-        short_name: `Novela`,
-        start_url: `/`,
-        background_color: `#fff`,
-        theme_color: `#fff`,
-        display: `standalone`,
-        icon: `src/assets/favicon.png`,
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-mailchimp',
+      options: {
+        endpoint: 'https://gmail.us20.list-manage.com/subscribe/post?u=041794295b67fd11f7a444e14&amp;id=a1afdb19e5', // add your MC list endpoint here; see plugin repo for instructions
+      },
+    },
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {       
+        name: "Addicts by Svirins",
+        short_name: "PSY H",
+        start_url: "https://addict.cf",
+        background_color: "#fff",
+        theme_color: "#fff",
+        display: "standalone",
+        icon: "src/assets/favicon.png",
       },
     },
   ],
