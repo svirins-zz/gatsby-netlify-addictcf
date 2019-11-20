@@ -7,7 +7,7 @@ module.exports = {
     siteUrl: `https://addict.cf`,
     description: `This is my description that will be used in the meta tags and important for search results`,
     hero: {
-      heading: `Addiction. Все об аддикции. Способы решения, рекомендации, советы`,
+      heading: `Addictive disorders are a group of disorders that can cause physical and psychological damage. <br/>Receiving treatment is essential for breaking the cycle of addiction.`,
       maxWidth: 1652,
     },
     social: [
@@ -18,6 +18,10 @@ module.exports = {
       {
         name: `instagram`,
         url: `https://instagram.com/`,
+      },
+      {
+        name: `facebook`,
+        url: `https://facebook.com/`,
       },
     ],
   },
