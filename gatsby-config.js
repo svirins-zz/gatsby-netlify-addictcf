@@ -8,7 +8,7 @@ module.exports = {
     description: `This is my description that will be used in the meta tags and important for search results`,
     hero: {
       heading: `Addictive disorders are a group of disorders that can cause physical and psychological damage. <br/>Receiving treatment is essential for breaking the cycle of addiction.`,
-      maxWidth: 1652,
+      maxWidth: 1652, 
     },
     social: [
       {
@@ -33,7 +33,7 @@ module.exports = {
         contentAuthors: "content/authors",
         basePath: "/",
         authorsPage: true,
-        mailchimp: true, // make sure this is true!
+        mailchimp: true, 
         sources: {
           local: false,
           contentful: true,
@@ -58,12 +58,25 @@ module.exports = {
       options: {       
         name: "Addicts by Svirins",
         short_name: "PSY H",
-        start_url: "https://addict.cf",
+        start_url: "/",
         background_color: "#fff",
         theme_color: "#fff",
         display: "standalone",
         icon: "src/assets/favicon.png",
       },
     },
-  ],
+    {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: `el_pinche`
+      }
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-144919197-2",
+        anonymize: true,
+      },
+    },
+  ]
 };
