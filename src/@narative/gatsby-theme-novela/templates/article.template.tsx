@@ -91,7 +91,8 @@ const Article: Template = ({ pageContext, location }) => {
   const disqusConfig = {
     url: `${siteURL + location.pathname}`,
     identifier: article.id,
-    title: article.title,
+    // title: article.title,
+    title: 'addicts'
   }
 
   return (
@@ -112,8 +113,8 @@ const Article: Template = ({ pageContext, location }) => {
       <div style={{maxWidth: '680px', margin: '0 auto', marginBottom: '2rem'}}>
         <Disqus config={disqusConfig} />
       </div>
-      
-      {mailchimp && article.subscription && <Subscription />}
+
+      <Subscription />
     
       {next.length > 0 && (
         <NextArticle narrow>

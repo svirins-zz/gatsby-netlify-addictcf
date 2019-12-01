@@ -68,7 +68,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-disqus`,
       options: {
-        shortname: `el_pinche`
+        shortname: `addict-cf`
       }
     },
     {
