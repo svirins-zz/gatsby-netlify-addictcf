@@ -9,14 +9,17 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "@narative/gatsby-theme-novela": "^0.10.3",
+    "@narative/gatsby-theme-novela": "^0.10.5",
     "dotenv": "^8.2.0",
-    "gatsby": "^2.18.5",
+    "formik": "^2.0.6",
+    "gatsby": "^2.18.7",
     "gatsby-plugin-disqus": "^1.1.4",
     "gatsby-plugin-google-analytics": "^2.1.29",
-    "gatsby-plugin-manifest": "^2.2.30",
-    "gatsby-source-contentful": "^2.1.65",
+    "gatsby-plugin-manifest": "^2.2.31",
+    "gatsby-source-contentful": "^2.1.67",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "react-transition-group": "^4.3.0",
+    "styled-components": "^4.4.1"
   }
 }
